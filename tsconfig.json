@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true, // необходимо указывать тип переменной
+    "module": "ESNext", // es6 || commonjs || ...
+    "target": "es5", // версия ES, в которую компилируется код
+    "jsx": "react",
+    "allowJs": true, // обработка не только ts, но и js
+    "moduleResolution": "node", // node || classic
+    "esModuleInterop": true, // позволяет работать с import вместо require
+    "allowSyntheticDefaultImports": true, // убирают * as из import
+    "baseUrl": "."
+  },
+  // bugfix: Cannot use import statement outside a module
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
