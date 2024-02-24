@@ -4,7 +4,7 @@
     "noImplicitAny": true, // необходимо указывать тип переменной
     "module": "ESNext", // es6 || commonjs || ...
     "target": "es5", // версия ES, в которую компилируется код
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true, // обработка не только ts, но и js
     "moduleResolution": "node", // node || classic
     "esModuleInterop": true, // позволяет работать с import вместо require
