@@ -9,7 +9,8 @@
     "moduleResolution": "node", // node || classic
     "esModuleInterop": true, // позволяет работать с import вместо require
     "allowSyntheticDefaultImports": true, // убирают * as из import
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": { "*": ["./src/*"] }
   },
   // bugfix: Cannot use import statement outside a module
   "ts-node": {
