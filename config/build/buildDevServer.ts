@@ -1,5 +1,5 @@
-import BuildOptions from "./types/config";
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
+import BuildOptions from './types/config'
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 
 // historyApiFallback - убирает 404 ошибку при обновлении адресной строки
 export function buildDevServer(options: BuildOptions): DevServerConfiguration {
@@ -7,6 +7,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     port: options.port,
     open: true,
     historyApiFallback: true,
-    hot: true,
-  };
+    hot: true
+  }
 }

@@ -1,53 +1,53 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import webpack from "webpack";
-import BuildOptions from "./types/config";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import webpack from 'webpack'
+import BuildOptions from './types/config'
 
 export default function buildLoaders({
-  isDev,
+  isDev
 }: BuildOptions): webpack.RuleSetRule[] {
   const svgLoader = {
     test: /\.svg$/,
-    use: ["@svgr/webpack"],
-  };
+    use: ['@svgr/webpack']
+  }
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff|woff2)$/i,
     use: [
       {
-        loader: "file-loader",
-      },
-    ],
-  };
+        loader: 'file-loader'
+      }
+    ]
+  }
   const babelLoader = {
     test: /\.(js|jsx|tsx)$/,
     exclude: /node_modules/,
     use: {
-      loader: "babel-loader",
+      loader: 'babel-loader',
       options: {
-        presets: ["@babel/preset-env"],
-      },
-    },
-  };
+        presets: ['@babel/preset-env']
+      }
+    }
+  }
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
-      isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       // преобразование CSS в CommonJS
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: {
-            auto: (resPath: string) => Boolean(resPath.includes(".module.")),
-            localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:8]",
-          },
-        },
+            auto: (resPath: string) => Boolean(resPath.includes('.module.')),
+            localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]'
+          }
+        }
       },
-      "sass-loader", // преобразование Sass в CSS
-    ],
-  };
+      'sass-loader' // преобразование Sass в CSS
+    ]
+  }
   const typescriptLoader = {
     test: /\.tsx?$/,
-    use: "ts-loader",
-    exclude: /node_modules/,
-  };
-  return [babelLoader, svgLoader, fileLoader, cssLoader, typescriptLoader];
+    use: 'ts-loader',
+    exclude: /node_modules/
+  }
+  return [babelLoader, svgLoader, fileLoader, cssLoader, typescriptLoader]
 }
