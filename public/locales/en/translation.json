@@ -1,7 +1,9 @@
 {
+  "error": "something goes wrong",
   "lang": "english",
   "main page": "main page",
   "page no found": "page no found",
   "test": "test",
-  "translate": "translate"
+  "translate": "translate",
+  "update_page": "update page"
 }
