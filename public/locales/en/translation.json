@@ -1,9 +1,13 @@
 {
-  "error": "something goes wrong",
-  "lang": "english",
-  "main page": "main page",
-  "page no found": "page no found",
-  "test": "test",
-  "translate": "translate",
-  "update_page": "update page"
+  "Тестовый пример": "Test example",
+  "Перевод": "Translate",
+  "Главная страница": "Main page",
+  "Язык": "English",
+  "новый перевод": "новый перевод",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Обновить страницу": "Reload page",
+  "throw error": "throw error",
+  "Главная": "Main",
+  "О сайте": "About us"
 }
