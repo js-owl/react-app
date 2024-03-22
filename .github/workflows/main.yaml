@@ -9,7 +9,8 @@ jobs:
   pipeline:
     runs-on: ubuntu-latest
     strategy:
-      matrix: node-version: [ 17 ]
+      matrix:
+        node: [17]
     steps:
       - uses: actions/checkout@v2
       - name: Starting Node.js ${{ matrix.node-version }}
