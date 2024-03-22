@@ -20,7 +20,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
     <div
       data-testid="sidebar"
       className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-        className,
+        className
       ])}
     >
       {/* eslint-disable-next-line i18next/no-literal-string */}
