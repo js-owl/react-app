@@ -1,7 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames';
+import React, {
+  InputHTMLAttributes,
+  memo,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 import cls from './Input.module.scss';
-import { InputHTMLAttributes, memo, useEffect, useRef, useState } from 'react';
-import { useSSR } from 'react-i18next';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
