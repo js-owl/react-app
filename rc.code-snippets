@@ -1,0 +1,17 @@
+{
+	"React component": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "rc",
+		"body": [
+			"import { classNames } from 'shared/lib/classNames/classNames';",
+			"import cls from './${TM_FILENAME_BASE}.module.scss';",
+			"import { useTranslation } from 'react-i18next';","",
+			"interface ${TM_FILENAME_BASE}Props {","  className?: string;","}",
+			"export const ${TM_FILENAME_BASE} = ({ className }: ${TM_FILENAME_BASE}Props) => {",
+			"  const { t } = useTranslation();","return (",
+			"<div className={classNames(cls.${TM_FILENAME_BASE},{}[className])}>$1</div>",
+			")","}",
+		],
+		"description": "Insert react component template"
+	}
+}
